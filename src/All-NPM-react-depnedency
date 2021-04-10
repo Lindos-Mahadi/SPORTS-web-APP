@@ -1,0 +1,2 @@
+npm install react-router-dom react-fontawesom react-simple-sidenav react-slick --save
+NOTE: ADD react-fontawesome cdn link(https://cdnjs.com/libraries/font-awesome) & react-slick (https://github.com/akiran/react-slick)
