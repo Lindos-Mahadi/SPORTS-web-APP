@@ -1,2 +1,14 @@
 npm install react-router-dom react-fontawesom react-simple-sidenav react-slick --save
 NOTE: ADD react-fontawesome cdn link(https://cdnjs.com/libraries/font-awesome) & react-slick (https://github.com/akiran/react-slick)
+
+
+// FOR EJECTING
+// Uninstalling react-scripts and installing react-scripts-cssmodules solved the problem
+1 ) npm uninstall react-scripts
+2 ) npm install react-scripts-cssmodules
+3 ) git add .
+4 ) git commit -am "change messages before running eject"
+5 ) npm run eject
+6 )
+7 )
+8 )
