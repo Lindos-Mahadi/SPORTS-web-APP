@@ -3,20 +3,21 @@ import style from './header.css'
 import { Link } from 'react-router-dom';
 
 import HorizontalSplitIcon from '@material-ui/icons/HorizontalSplit';
-// import SideNav from './SideNav/sideNav';
+import SideNav from "./sideNav/SideNav";
 
 const Header = (props) => {
 
 
     const navBars = () => (
-        <div className="">
+        <div className="bars">
             <HorizontalSplitIcon
-                // onClick={props.onOpenNav}
+                onClick={props.onOpenNav}
 
                 style={{
                     color:'#dfdfdf',
-                    padding:'10px',
-                    cursor:'pointer'
+                    padding:'0 0 0 10px',
+                    cursor:'pointer',
+                    fontSize: '35px'
                 }}
             />
         </div>
@@ -31,15 +32,13 @@ const Header = (props) => {
 
     return (
         <header className="header">
-            {/* <SideNav {...props}/> */}
+            <SideNav {...props} /> 
             <div className="headerOptional">
                 {navBars()}
                 {logo()}
             </div>
         </header>
     )
-
-
 }
 
 export default Header;
