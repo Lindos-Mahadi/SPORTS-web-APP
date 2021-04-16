@@ -2,24 +2,25 @@ import React from 'react';
 import style from './header.css'
 import { Link } from 'react-router-dom';
 
-// import FontAwesome from 'react-fontawesome';
+import HorizontalSplitIcon from '@material-ui/icons/HorizontalSplit';
 // import SideNav from './SideNav/sideNav';
 
 const Header = (props) => {
 
 
-    // const navBars = () => (
-    //     <div className={style.bars}>
-    //         <FontAwesome name="bars"
-    //             onClick={props.onOpenNav}
-    //             style={{
-    //                 color:'#dfdfdf',
-    //                 padding:'10px',
-    //                 cursor:'pointer'
-    //             }}
-    //         />
-    //     </div>
-    // )
+    const navBars = () => (
+        <div className="">
+            <HorizontalSplitIcon
+                // onClick={props.onOpenNav}
+
+                style={{
+                    color:'#dfdfdf',
+                    padding:'10px',
+                    cursor:'pointer'
+                }}
+            />
+        </div>
+    )
 
     const logo = () => (
         <Link to="/" className="logo">
@@ -32,7 +33,7 @@ const Header = (props) => {
         <header className="header">
             {/* <SideNav {...props}/> */}
             <div className="headerOptional">
-                {/* {navBars()} */}
+                {navBars()}
                 {logo()}
             </div>
         </header>
