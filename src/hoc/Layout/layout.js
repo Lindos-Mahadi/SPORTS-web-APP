@@ -3,6 +3,7 @@ import './layout.css';
 
 
 import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
 class Layout extends Component {
     state = {
@@ -25,7 +26,7 @@ class Layout extends Component {
                     
                  />
                     {this.props.children}
-                Footer
+                <Footer />
             </div>
         )
     }
