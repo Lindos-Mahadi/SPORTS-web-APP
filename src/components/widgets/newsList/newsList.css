@@ -23,7 +23,7 @@
 
 
 
-/* .newsList_wrapper {
+.newsList_wrapper {
     box-sizing: border-box;
     opacity: 0;
     transform: translateX(-100%);
@@ -63,4 +63,4 @@
 .flex_wrapper h2 {
     font-size: 12px;
     color:#525252;
-} */
+}

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import './newsList.css'
+import './newsList.css';
 
 import { CSSTransition , TransitionGroup } from 'react-transition-group';
 import { Link } from  'react-router-dom';
 import axios from 'axios';
 
 import {URL} from '../../../config';
+import Button from '../Buttons/Button';
 
 
 class NewsList extends Component {
@@ -43,13 +44,19 @@ class NewsList extends Component {
         switch(type){
             case('card'):
                 template = this.state.items.map((item, i) =>(
-                    <div>
-                        <div className="newsList">
-                            <Link to={`/articles/${item.id}`}>
-                                <h2>{item.title}</h2>
-                            </Link>
+                    <CSSTransition classNames="newsList_wrapper"
+                    timeout={500}
+                    key={i}
+                    >
+                        <div>
+                            <div className="newslist_item">
+                                <Link to={`/articles/${item.id}`}>
+                                    Teams
+                                    <h2>{item.title}</h2>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
+                    </CSSTransition>
                 ));
                 break;
             default:
@@ -62,8 +69,18 @@ class NewsList extends Component {
         // console.log(this.state.items)
         return (
             <div>
-                {this.renderNews(this.props.type)}
-                <div onClick={()=>this.loadMore()}>Load More</div>
+                <TransitionGroup
+                    component="div"
+                    className="list"
+                >
+                    { this.renderNews( this.props.type )}
+                </TransitionGroup>
+                {/* <div onClick={()=>this.loadMore()}>Load More</div> */}
+                <Button
+                    type="loadmore"
+                    loadMore={()=>this.loadMore()}
+                    cta="Load More News"
+                 />
             </div>
         )
     }

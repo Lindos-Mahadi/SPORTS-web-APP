@@ -9,6 +9,6 @@ NOTE: ADD react-fontawesome cdn link(https://cdnjs.com/libraries/font-awesome) &
 3 ) git add .
 4 ) git commit -am "change messages before running eject"
 5 ) npm run eject
-6 )
+6 ) npm i react-transition-group
 7 )
 8 )
